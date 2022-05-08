@@ -1,0 +1,56 @@
+[
+  {
+    "campaign_id": 1,
+    "country": "CA",
+    "domain": "apple.com",
+    "dimensions": [
+      "300x250",
+      "600x200"
+    ]
+  },
+  {
+    "campaign_id": 2,
+    "country": "US",
+    "domain": "walmart.com",
+    "dimensions": [
+      "200x100",
+      "400x200"
+    ]
+  },
+  {
+    "campaign_id": 3,
+    "country": "MX",
+    "domain": "pepsi.com",
+    "dimensions": [
+      "300x250",
+      "400x200"
+    ]
+  },
+  {
+    "campaign_id": 4,
+    "country": "CA",
+    "domain": "pepsi.com",
+    "dimensions": [
+      "200x250",
+      "600x200"
+    ]
+  },
+  {
+    "campaign_id": 5,
+    "country": "US",
+    "domain": "pepsi.com",
+    "dimensions": [
+      "200x250",
+      "600x200"
+    ]
+  },
+  {
+    "campaign_id": 6,
+    "country": "MX",
+    "domain": "walmart.com",
+    "dimensions": [
+      "200x250",
+      "400x200"
+    ]
+  }
+]

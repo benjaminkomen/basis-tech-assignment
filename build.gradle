@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+
+group = 'com.basistech'
+version = '1.0.0'
+description = 'Basis Tech Assignment'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+    jsonVersion = "2.13.2"
+}
+
+dependencies {
+    implementation "com.fasterxml.jackson.core:jackson-core:${jsonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jsonVersion}"
+}
