@@ -15,8 +15,6 @@ public class CampaignBidsMatchingService {
 
     private final AdvertisingRepository advertisingRepository = new AdvertisingRepository();
     private final BidRequestService bidRequestService = new BidRequestService();
-
-    private final BidProcessingService bidProcessingService = new BidProcessingService();
     private final OutputRepository outputRepository = new OutputRepository();
 
     public CampaignBidsMatchingService(int totalBidRequests) {
@@ -28,12 +26,11 @@ public class CampaignBidsMatchingService {
         var campaigns = advertisingRepository.getCampaigns();
         System.out.printf("Reading %s advertising campaigns from disk.%n", campaigns.size());
 
+        BidProcessingService bidProcessingService = new BidProcessingService(campaigns);
+
         var bidRequests = bidRequestService.generateRequests(totalBidRequests);
 
-        // TODO: possible make the processing happen concurrently
-        var processingResults = bidRequests.stream()
-                .map(bidRequest -> bidProcessingService.process(bidRequest, campaigns))
-                .toList();
+        var processingResults = bidProcessingService.processRequests(bidRequests);
         
         var totalEligibleBids = processingResults.stream()
                 .filter(result -> !result.getEligibleCampaignIds().isEmpty())
