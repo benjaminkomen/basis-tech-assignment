@@ -26,4 +26,20 @@ public class BidRequest {
     public static BidRequest of(Integer requestId, String pageURL, Country country, List<String> dimensions) {
         return new BidRequest(requestId, pageURL, country, dimensions);
     }
+
+    public Integer getRequestId() {
+        return requestId;
+    }
+
+    public String getPageURL() {
+        return pageURL;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public List<String> getDimensions() {
+        return dimensions;
+    }
 }

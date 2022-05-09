@@ -15,4 +15,20 @@ public class Campaign {
     private String domain;
     @JsonProperty("dimensions")
     private List<String> dimensions;
+
+    public Integer getCampaignId() {
+        return campaignId;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public List<String> getDimensions() {
+        return dimensions;
+    }
 }

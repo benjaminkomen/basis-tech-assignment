@@ -22,16 +22,16 @@ public class CampaignBidsMatchingService {
         var campaigns = advertisingRepository.getCampaigns();
         System.out.printf("Reading %s advertising campaigns from disk.%n", campaigns.size());
 
-        var bidRequests = bidRequestService.generateRequests(5); // TODO: increase amount of requests
+        var bidRequests = bidRequestService.generateRequests(100); // TODO: increase amount of requests
 
         // TODO: possible make the processing happen concurrently
         var processingResults = bidRequests.stream()
-                .map(bidProcessingService::process)
+                .map(bidRequest -> bidProcessingService.process(bidRequest, campaigns))
                 .toList();
 
         Instant ends = Instant.now();
         long totalEvaluationTimeInMilliseconds = Duration.between(starts, ends).toMillis();
-        System.out.printf("Program took %s milliseconds to finish.", totalEvaluationTimeInMilliseconds);
+        System.out.printf("Processing took %s milliseconds to finish.%n", totalEvaluationTimeInMilliseconds);
 
         var output = Output.of(campaigns, processingResults, processingResults.size(), totalEvaluationTimeInMilliseconds);
 
