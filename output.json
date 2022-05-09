@@ -1,1 +1,122 @@
-{"campaigns":[{"campaign_id":1,"country":"CA","domain":"apple.com","dimensions":["300x250","600x200"]},{"campaign_id":2,"country":"US","domain":"walmart.com","dimensions":["200x100","400x200"]},{"campaign_id":3,"country":"MX","domain":"pepsi.com","dimensions":["300x250","400x200"]},{"campaign_id":4,"country":"CA","domain":"pepsi.com","dimensions":["200x250","600x200"]},{"campaign_id":5,"country":"US","domain":"pepsi.com","dimensions":["200x250","600x200"]},{"campaign_id":6,"country":"MX","domain":"walmart.com","dimensions":["200x250","400x200"]}],"total_bid_requests_processed":-1,"total_evaluation_time_in_milliseconds":64}
+{
+  "campaigns": [
+    {
+      "campaign_id": 1,
+      "country": "CA",
+      "domain": "apple.com",
+      "dimensions": [
+        "300x250",
+        "600x200"
+      ]
+    },
+    {
+      "campaign_id": 2,
+      "country": "US",
+      "domain": "walmart.com",
+      "dimensions": [
+        "200x100",
+        "400x200"
+      ]
+    },
+    {
+      "campaign_id": 3,
+      "country": "MX",
+      "domain": "pepsi.com",
+      "dimensions": [
+        "300x250",
+        "400x200"
+      ]
+    },
+    {
+      "campaign_id": 4,
+      "country": "CA",
+      "domain": "pepsi.com",
+      "dimensions": [
+        "200x250",
+        "600x200"
+      ]
+    },
+    {
+      "campaign_id": 5,
+      "country": "US",
+      "domain": "pepsi.com",
+      "dimensions": [
+        "200x250",
+        "600x200"
+      ]
+    },
+    {
+      "campaign_id": 6,
+      "country": "MX",
+      "domain": "walmart.com",
+      "dimensions": [
+        "200x250",
+        "400x200"
+      ]
+    }
+  ],
+  "evaluation_results": [
+    {
+      "bid_request": {
+        "request_id": 1,
+        "page_url": "https://walmart.com/ca/store?item=1290",
+        "country": "MX",
+        "dimensions": [
+          "200x200",
+          "300x400"
+        ]
+      },
+      "eligible_campaign_ids": []
+    },
+    {
+      "bid_request": {
+        "request_id": 2,
+        "page_url": "https://pepsi.com/ca/store?item=1290",
+        "country": "CA",
+        "dimensions": [
+          "800x900",
+          "100x200"
+        ]
+      },
+      "eligible_campaign_ids": []
+    },
+    {
+      "bid_request": {
+        "request_id": 3,
+        "page_url": "https://pepsi.com/ca/store?item=1290",
+        "country": "US",
+        "dimensions": [
+          "800x800",
+          "300x400"
+        ]
+      },
+      "eligible_campaign_ids": []
+    },
+    {
+      "bid_request": {
+        "request_id": 4,
+        "page_url": "https://walmart.com/ca/store?item=1290",
+        "country": "CA",
+        "dimensions": [
+          "400x600",
+          "100x300"
+        ]
+      },
+      "eligible_campaign_ids": []
+    },
+    {
+      "bid_request": {
+        "request_id": 5,
+        "page_url": "https://walmart.com/ca/store?item=1290",
+        "country": "CA",
+        "dimensions": [
+          "800x900",
+          "100x200"
+        ]
+      },
+      "eligible_campaign_ids": []
+    }
+  ],
+  "total_bid_requests_processed": 5,
+  "total_evaluation_time_in_milliseconds": 82
+}

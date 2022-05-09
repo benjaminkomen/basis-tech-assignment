@@ -4,8 +4,9 @@
     "country": "CA",
     "domain": "apple.com",
     "dimensions": [
-      "300x250",
-      "600x200"
+      "300x300",
+      "600x700",
+      "800x900"
     ]
   },
   {
@@ -13,8 +14,9 @@
     "country": "US",
     "domain": "walmart.com",
     "dimensions": [
-      "200x100",
-      "400x200"
+      "200x200",
+      "400x500",
+      "700x700"
     ]
   },
   {
@@ -22,8 +24,9 @@
     "country": "MX",
     "domain": "pepsi.com",
     "dimensions": [
-      "300x250",
-      "400x200"
+      "300x500",
+      "400x600",
+      "800x800"
     ]
   },
   {
@@ -31,8 +34,10 @@
     "country": "CA",
     "domain": "pepsi.com",
     "dimensions": [
-      "200x250",
-      "600x200"
+      "200x200",
+      "600x700",
+      "100x200",
+      "600x700"
     ]
   },
   {
@@ -40,8 +45,10 @@
     "country": "US",
     "domain": "pepsi.com",
     "dimensions": [
-      "200x250",
-      "600x200"
+      "400x500",
+      "600x700",
+      "300x400",
+      "800x800"
     ]
   },
   {
@@ -49,8 +56,10 @@
     "country": "MX",
     "domain": "walmart.com",
     "dimensions": [
-      "200x250",
-      "400x200"
+      "200x200",
+      "400x500",
+      "500x700",
+      "800x900"
     ]
   }
 ]
