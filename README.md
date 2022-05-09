@@ -1,6 +1,6 @@
 # Assignment Basis Technologies
 
-Evaluate bid requests against advertising campaigns.
+Evaluate bid requests against advertising campaigns. See also the [assignment](./Backend_Assignment.pdf).
 
 ## Instructions
 
@@ -11,6 +11,9 @@ example: `./gradlew run --args=100` will execute the program with 100 bid reques
 
 ## Assumptions
 
-- Java 17 is used, as it makes most sense to use the latest LTS version of Java;
+- Java 17 is used, as it makes most sense to use the latest LTS version of Java.
 - Since the requirement stated no external libraries except JSON parsing are allowed, no logging library is used, but
-  logs are directly printed to stout;
+  logs are directly printed to stout.
+- Due to time constraints no unit tests were created and the program was only manually tested. In a production scenario,
+  unit tests would be definitely made.
+- 

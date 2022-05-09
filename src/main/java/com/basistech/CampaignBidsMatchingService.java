@@ -39,7 +39,8 @@ public class CampaignBidsMatchingService {
                 .filter(result -> !result.getEligibleCampaignIds().isEmpty())
                 .count();
 
-        System.out.printf("From the %s total bid requests processed, there were %s which found an eligible campaign.%n", totalBidRequests, totalEligibleBids);
+        System.out.printf("From the %s total bid requests processed, there were %s which found an eligible campaign.%n",
+                totalBidRequests, totalEligibleBids);
 
         Instant ends = Instant.now();
         long totalEvaluationTimeInMilliseconds = Duration.between(starts, ends).toMillis();
