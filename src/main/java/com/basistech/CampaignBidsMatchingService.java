@@ -11,23 +11,35 @@ import java.time.Instant;
 
 public class CampaignBidsMatchingService {
 
+    private final Integer totalBidRequests;
+
     private final AdvertisingRepository advertisingRepository = new AdvertisingRepository();
     private final BidRequestService bidRequestService = new BidRequestService();
 
     private final BidProcessingService bidProcessingService = new BidProcessingService();
     private final OutputRepository outputRepository = new OutputRepository();
 
+    public CampaignBidsMatchingService(int totalBidRequests) {
+        this.totalBidRequests = totalBidRequests;
+    }
+
     public void start() {
         Instant starts = Instant.now();
         var campaigns = advertisingRepository.getCampaigns();
         System.out.printf("Reading %s advertising campaigns from disk.%n", campaigns.size());
 
-        var bidRequests = bidRequestService.generateRequests(100); // TODO: increase amount of requests
+        var bidRequests = bidRequestService.generateRequests(totalBidRequests);
 
         // TODO: possible make the processing happen concurrently
         var processingResults = bidRequests.stream()
                 .map(bidRequest -> bidProcessingService.process(bidRequest, campaigns))
                 .toList();
+        
+        var totalEligibleBids = processingResults.stream()
+                .filter(result -> !result.getEligibleCampaignIds().isEmpty())
+                .count();
+
+        System.out.printf("From the %s total bid requests processed, there were %s which found an eligible campaign.%n", totalBidRequests, totalEligibleBids);
 
         Instant ends = Instant.now();
         long totalEvaluationTimeInMilliseconds = Duration.between(starts, ends).toMillis();

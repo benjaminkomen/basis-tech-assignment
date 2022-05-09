@@ -18,4 +18,12 @@ public class EvaluationResult {
     public static EvaluationResult of(BidRequest bidRequest, List<Integer> eligibleCampaignIds) {
         return new EvaluationResult(bidRequest, eligibleCampaignIds);
     }
+
+    public BidRequest getBidRequest() {
+        return bidRequest;
+    }
+
+    public List<Integer> getEligibleCampaignIds() {
+        return eligibleCampaignIds;
+    }
 }

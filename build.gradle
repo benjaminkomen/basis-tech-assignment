@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 
@@ -19,4 +20,8 @@ ext {
 dependencies {
     implementation "com.fasterxml.jackson.core:jackson-core:${jsonVersion}"
     implementation "com.fasterxml.jackson.core:jackson-databind:${jsonVersion}"
+}
+
+application {
+    mainClass = 'com.basistech.Main'
 }
